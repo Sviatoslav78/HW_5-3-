@@ -55,7 +55,7 @@ public class Main {
             }
             try {
                 // such sleep time is because there is not enough memory and with 15s sleep the output is correct for 80 millions of elements
-                Thread.sleep(15000);
+                TimeUnit.SECONDS.sleep(15);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -64,6 +64,7 @@ public class Main {
             System.out.println((double) (System.nanoTime() - startThread) / 1000000000 + " seconds");
 
             startThread = 0;
+
         }
     }
 }
