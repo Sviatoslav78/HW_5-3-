@@ -2,6 +2,7 @@ package com.HW_8_1;
 
 import java.util.Scanner;
 import java.util.concurrent.Semaphore;
+import java.util.concurrent.TimeUnit;
 
 
 public class Main {
@@ -23,7 +24,7 @@ public class Main {
         for (int i = 0; i < peopleCount; i++) {
             new Human(semaphore,maxAmount).start();
             try {
-                Thread.sleep(1000);
+                TimeUnit.SECONDS.sleep(1);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
